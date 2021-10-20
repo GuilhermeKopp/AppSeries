@@ -16,39 +16,39 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
-import model.services.DepartmentService;
-import model.services.SellerService;
+import model.services.CategoriaService;
+import model.services.SeriesService;
 
 public class MainViewController implements Initializable {
 
 	@FXML
-	private MenuItem menuItemSeller;
+	private MenuItem menuItemSeries;
 
 	@FXML
-	private MenuItem menuItemDepartment;
+	private MenuItem menuItemCategoria;
 
 	@FXML
-	private MenuItem menuItemAbout;
+	private MenuItem menuItemSobreOApp;
 
 	@FXML
-	public void onMenuItemSellerAction() {
-		loadView("/gui/SellerList.fxml", (SellerListController controller) -> {
-			controller.setSellerService(new SellerService());
+	public void onMenuItemSeriesAction() {
+		loadView("/gui/SeriesList.fxml", (SeriesListController controller) -> {
+			controller.setSeriesService(new SeriesService());
 			controller.updateTableView();
 		});
 	}
 
 	@FXML
-	public void onMenuItemDepartmentAction() {
-		loadView("/gui/DepartmentList.fxml", (DepartmentListController controller) -> {
-			controller.setDepartmentService(new DepartmentService());
+	public void onMenuItemCategoriaAction() {
+		loadView("/gui/CategoriaList.fxml", (CategoriatListController controller) -> {
+			controller.setCategoriaService(new CategoriaService());
 			controller.updateTableView();
 		});
 	}
 
 	@FXML
-	public void onMenuItemAboutAction() {
-		loadView("/gui/About.fxml", x -> {});
+	public void onMenuItemSobreOAppAction() {
+		loadView("/gui/SobreOApp.fxml", x -> {});
 	}
 
 	@Override

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -8,24 +9,30 @@
 
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewController">
    <content>
-      <VBox prefHeight="325.0" prefWidth="507.0">
+      <VBox prefHeight="325.0" prefWidth="507.0" style="-fx-background-color: #98BCD1;">
          <children>
-            <MenuBar>
+            <MenuBar style="-fx-background-color: #547D94;">
               <menus>
-                <Menu mnemonicParsing="false" text="Registration">
+                <Menu mnemonicParsing="false" style="-fx-background-color: #EFEFEF;" text="Registrar">
                   <items>
-                    <MenuItem fx:id="menuItemSeller" mnemonicParsing="false" onAction="#onMenuItemSellerAction" text="Seller" />
-                        <MenuItem fx:id="menuItemDepartment" mnemonicParsing="false" onAction="#onMenuItemDepartmentAction" text="Department" />
+                    <MenuItem fx:id="menuItemSeries" mnemonicParsing="false" onAction="#onMenuItemSeriesAction" text="Series" />
+                        <MenuItem fx:id="menuItemCategoria" mnemonicParsing="false" onAction="#onMenuItemCategoriaAction" text="Categoria" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Help">
+                <Menu mnemonicParsing="false" style="-fx-background-color: #EFEFEF;" text="Ajuda">
                   <items>
-                    <MenuItem fx:id="menuItemAbout" mnemonicParsing="false" onAction="#onMenuItemAboutAction" text="About" />
+                    <MenuItem fx:id="menuItemSobreOApp" mnemonicParsing="false" onAction="#onMenuItemSobreOAppAction" text="Sobre o App" />
                   </items>
                 </Menu>
               </menus>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </MenuBar>
          </children>
       </VBox>
    </content>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
 </ScrollPane>
